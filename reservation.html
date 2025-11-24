@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Réservation – AtomTravel</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <nav>
+        <div class="logo">AtomTravel</div>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="reservation.html">Réservation</a></li>
+            <li><a href="qui_somme_nous.html">À propos de nous</a></li>
+        </ul>
+    </nav>
+
+    <section class="container">
+        <h1>Nos Guides Experts</h1>
+        <div class="guides-container">
+            <div class="guide-card">
+                <img src="Image/Guide Francinium.jpg" alt="Guide Francinium">
+                <h3>Dr. Francinium</h3>
+            </div>
+            <div class="guide-card">
+                <img src="Image/guideArsenic.jpg" alt="Guide Arsenic">
+                <h3>Prof. Arsenic</h3>
+            </div>
+            <div class="guide-card">
+                <img src="Image/guideAntimoine.webp" alt="Guide Antimoine">
+                <h3>Capt. Antimoine</h3>
+            </div>
+            <div class="guide-card">
+                <img src="Image/lapin.avif" alt="Guide Einsteinium">
+                <h3>Mr. Einsteinium</h3>
+            </div>
+        </div>
+
+        <h1>Réserver un voyage</h1>
+
+        <form class="form-reservation">
+            <div class="form-group">
+                <label>Nom</label>
+                <input type="text" required>
+            </div>
+            <br>
+            <div class="form-group">
+                <label>Prénom</label>
+                <input type="text" required>
+            </div>
+            <br>
+            <div class="form-group">
+                <label>Destination</label>
+                <select required>
+                    <option value="">Sélectionner...</option>
+                    <option>Francium</option>
+                    <option>Arsenic</option>
+                    <option>Antimoine</option>
+                </select>
+            </div>
+            <br>
+            <div class="form-group">
+                <label>Choix du Guide</label>
+                <select required>
+                    <option>Dr. Francinium</option>
+                    <option>Prof. Arsenic</option>
+                    <option>Capt. Antimoine</option>
+                </select>
+            </div>
+            <br>
+            <div class="form-group">
+                <label>Date</label>
+                <input type="date" required>
+            </div>
+            <br>
+            <button type="submit" class="btn">Envoyer la réservation</button>
+        </form>
+
+       <div style="margin-top: 50px;">
+    <h3>Notre Agence Physique</h3>
+    <p>Située au coeur du campus.</p>
+    <iframe class="map-custom" width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=2.1691238880157475%2C48.69998855661276%2C2.175131887197495%2C48.70275816223838&amp;layer=mapnik"></iframe>
+</div>
+
+    </section>
+
+    <footer class="pied-de-page">
+        <div class="contenu-footer">
+            
+            <div class="colonne-footer">
+                <div class="logo-footer">Atom<span>Travel</span></div>
+                <p>
+                    L'agence de voyage n°1 de l'infiniment petit.
+                    Voyagez en toute sécurité entre les électrons depuis 2025.
+                    Fait par Yassine Bouazza & Maxence Juillié
+                    Nos rapports:
+                </p>
+                <a href="Compte rendue - proj web.pdf">PDF</a>
+                <a href="Compte rendue - proj web.odt">odt</a>
+            </div>
+    
+            <div class="colonne-footer">
+                <h3>Exploration</h3>
+                <ul>
+                    <li><a href="#">Nos Destinations</a></li>
+                    <li><a href="#">Vaisseaux & Technologie</a></li>
+                    <li><a href="#">Assurance Vie (Quantique)</a></li>
+                    <li><a href="#">Lois de la Physique</a></li> </ul>
+            </div>
+    
+            <div class="colonne-footer">
+                <h3>Base de Lancement</h3>
+                <ul class="contact-info">
+                    <li>Secteur 7G, Nuage d'Électrons</li>
+                    <li> Fréquence : 104.5 MHz</li>
+                    <li> contact@atomtrip.lab</li>
+                </ul>
+            </div>
+           <img src="Image/logoiut.png" alt="Logo IUT" style="max-width: 100px;">
+        </div>
+    </footer>
+
+</body>
+</html>

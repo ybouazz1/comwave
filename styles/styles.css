@@ -1,0 +1,251 @@
+/* Reset et Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Police locale pour les points bonus */
+@font-face {
+    font-family: 'MaPoliceTitre';
+    src: local('Arial'); 
+}
+
+body {
+    background: radial-gradient(circle at center, #0f0f0f 50%, #070707 100%);
+    color: #DA9B44;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar */
+nav {
+    width: 100%;
+    background: #a22d2d;
+    backdrop-filter: blur(10px);
+    padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+nav .logo {
+    font-size: 32px;
+    font-weight: 700;
+    color: #780116;
+    text-shadow: 0 0 8px #DA9B44;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin-top: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover { color: #DA9B44; }
+
+#menu-toggle, .menu-icon { display: none; }
+
+@media(max-width: 850px) {
+    .menu-icon { display: block; color: #DA9B44; font-size: 30px; cursor: pointer; }
+    nav ul { display: none; flex-direction: column; gap: 15px; width: 100%; text-align: center; }
+    #menu-toggle:checked ~ ul { display: flex; }
+}
+
+/* STYLES SPECIFIQUES POUR LES POINTS DU PROJET */
+
+/* Voyages (Page 1) */
+.voyages-container {
+    padding: 40px 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.voyage-card {
+    display: flex;
+    flex-wrap: wrap;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #DA9B44;
+}
+
+.voyage-img { flex: 1 1 300px; }
+.voyage-img img { width: 100%; height: 100%; object-fit: cover; min-height: 250px; }
+.voyage-content { flex: 2 1 400px; padding: 20px; }
+.voyage-content h3 { color: #a22d2d; margin-bottom: 10px; }
+.details { font-weight: bold; color: white; margin: 10px 0; }
+.profil-cible { margin-top: 15px; background: rgba(0,0,0,0.3); padding: 10px; border-radius: 8px; }
+
+/* Guides & Formulaire (Page 2) */
+.container { padding: 40px 10%; text-align: center; }
+
+.guides-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.guide-card img {
+    width: 100px; height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 2px solid #DA9B44;
+}
+
+.form-reservation {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    background: rgba(255,255,255,0.05);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 10px;
+    background: #1a1a1a;
+    border: 1px solid #DA9B44;
+    color: white;
+    border-radius: 5px;
+}
+
+.btn {
+    width: 100%; padding: 15px;
+    background: #DA9B44; color: black;
+    font-weight: bold; border: none; cursor: pointer;
+}
+
+/* À propos (Page 3) - Styles obligatoires */
+.hero-about {
+    background-image: url('../Image/fond_2.jpg'); /* Vérifie le nom de ton image */
+    background-size: cover;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.about-block {
+    margin: 40px 10%;
+    padding: 30px;
+}
+
+/* Différence visuelle obligatoire entre paragraphes */
+.block-dark { background: rgba(255,255,255,0.05); text-align: left; border-left: 5px solid #DA9B44; }
+.block-light { background: rgba(255,255,255,0.1); text-align: right; border-right: 5px solid #a22d2d; }
+
+.team-grid {
+    display: flex; justify-content: center; gap: 40px; margin-top: 30px;
+}
+.member img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 3px solid #DA9B44; }
+
+
+/* --- TON CSS ORIGINAL DU FOOTER --- */
+.pied-de-page {
+    background-color: #050505; 
+    color: #bdc3c7;
+    padding-top: 60px;
+    margin-top: auto; /* Gardé pour pousser en bas */
+    border-top: 3px solid #45a29e; 
+    box-shadow: 0 -10px 20px rgba(69, 162, 158, 0.1); 
+    font-family: sans-serif;
+}
+
+.contenu-footer {
+    max-width: 1200px;
+    margin: 0 auto; 
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    padding: 0 20px 40px 20px;
+    gap: 40px;
+}
+
+.colonne-footer {
+    flex: 1; 
+    min-width: 250px; 
+}
+
+.logo-footer {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.logo-footer span { color: #45a29e; }
+
+.colonne-footer h3 {
+    color: white;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.colonne-footer h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background-color: #45a29e;
+}
+
+.colonne-footer ul { list-style: none; padding: 0; }
+.colonne-footer li { margin-bottom: 12px; }
+
+.colonne-footer a {
+    text-decoration: none;
+    color: #bdc3c7;
+    transition: 0.3s;
+}
+
+.colonne-footer a:hover {
+    color: #66fcf1; 
+    padding-left: 5px; 
+}
+/* --- CUSTOMISATION DE LA CARTE (Mode Sombre) --- */
+.map-custom {
+    border: 2px solid #DA9B44; /* Bordure dorée */
+    border-radius: 12px;
+    /* L'astuce magique : */
+    filter: invert(100%) hue-rotate(180deg) contrast(90%);
+    transition: filter 0.3s ease;
+}
+
+/* Petit effet au survol : la carte s'illumine un peu */
+.map-custom:hover {
+    filter: invert(100%) hue-rotate(180deg) contrast(110%);
+    box-shadow: 0 0 20px rgba(218, 155, 68, 0.3);
+}
